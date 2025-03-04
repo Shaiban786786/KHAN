@@ -68,7 +68,7 @@ async def run_attack(chat_id, ip, port, duration, context):
         if stderr:
             print(f"[stderr]\n{stderr.decode()}")
 
-    except Exception as e:
+    except as
         await context.bot.send_message(chat_id=chat_id, text=f"❗ **Error during premium attack:** {str(e)}", parse_mode='Markdown')
 
     finally:
@@ -96,7 +96,7 @@ async def attack(update: Update, context: CallbackContext):
 
     try:
         duration = int(duration_str)
-    except ValueError:
+    except 
         await context.bot.send_message(chat_id=chat_id, text="⚠️ **Invalid duration!** Please enter a valid number for duration.", parse_mode='Markdown')
         return
 
@@ -167,7 +167,7 @@ async def add_user(update: Update, context: CallbackContext):
         new_user_id = int(args[0])
         expiry_value = int(args[1])
         unit = args[2].lower()
-    except ValueError:
+    except
         await context.bot.send_message(chat_id=chat_id, text="⚠️ **Invalid input!** Please ensure user_id and expiry_value are numbers.", parse_mode='Markdown')
         return
 
